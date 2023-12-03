@@ -5,6 +5,9 @@
 使用cron設定排成生成report。
 使用Nginx反向代理web server。
 
+完成Qeury API及fake API，還有排程報告，但並沒有儲存到AWS S3
+快取做到會將Query過的資訊以sno, data的方式暫存1小時
+
 提供兩個API:
 1. Query API: 
 api/query?sno={$sno}
