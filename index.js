@@ -12,7 +12,7 @@ app.use(bodyParser.json());
 
 async function syncDatabase() {
   try {
-    await sequelize.sync({ force: false });
+    await sequelize.sync({ force: true });
     console.log('Database models synchronized successfully.');
   } catch (error) {
     console.error('Error synchronizing database models:', error);

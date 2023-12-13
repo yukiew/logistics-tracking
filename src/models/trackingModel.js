@@ -22,7 +22,7 @@ const Recipient = sequelize.define('Recipient', {
   id: {
     type: DataTypes.INTEGER,
     primaryKey: true,
-    autoIncrement: true,
+    allowNull: false,
   },
   name: {
     type: DataTypes.STRING,
@@ -42,7 +42,7 @@ const Location = sequelize.define('Location', {
   id: {
     type: DataTypes.INTEGER,
     primaryKey: true,
-    autoIncrement: true,
+    allowNull: false,
   },
   title: {
     type: DataTypes.STRING,
@@ -68,7 +68,7 @@ const Shipment = sequelize.define('Shipment', {
     type: DataTypes.INTEGER,
     allowNull: false,
   },
-  recipient_Id: {
+  id: {
     type: DataTypes.INTEGER,
     allowNull: false,
   },
@@ -104,7 +104,7 @@ const ShipmentDetail = sequelize.define('ShipmentDetail', {
 
 // Define associations
 Shipment.hasMany(ShipmentDetail, { foreignKey: 'shipment_sno' });
-Shipment.belongsTo(Recipient, { foreignKey: 'recipient_Id' });
+Shipment.belongsTo(Recipient, { foreignKey: 'id' });
 Shipment.belongsTo(Location, { foreignKey: 'current_Location_Id' });
 ShipmentDetail.belongsTo(Location, { foreignKey: 'location_id' });
 

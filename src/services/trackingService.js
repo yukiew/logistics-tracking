@@ -87,8 +87,8 @@ exports.generateFakeData = async (num) => {
           'Exception',
         ]),
         estimated_delivery: faker.date.future().toISOString().split('T')[0],
-        recipient_Id: faker.random.arrayElement(recipients).id,
-        current_Location_Id: faker.random.arrayElement(locations).location_id,
+        id: faker.random.arrayElement(recipients).id,
+        current_Location_Id: faker.random.arrayElement(locations).id,
         details: [],
       };
 
