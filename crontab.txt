@@ -1,1 +1,0 @@
-0 0,8,16 * * * node /home/ubuntu/logistics-tracking/report-script.js
